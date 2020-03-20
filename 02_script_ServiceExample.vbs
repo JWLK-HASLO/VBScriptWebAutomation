@@ -58,22 +58,29 @@ For i = 0 to numButtonNodeList - 1
           'First Section of Home department :: Hospital
           If Not StrComp(data, "lddInputHospitals") Then 
                objButtonNodeList.item(i).Click
-               WScript.Sleep 100
+               WScript.Sleep 1000
                WshShell.SendKeys "{TAB}"
-               WScript.Sleep 100
+               WScript.Sleep 1000
                WshShell.SendKeys "{ENTER}"
+               WScript.Sleep 1000
           'Second Section of Home department :: Department
           ElseIf Not StrComp(data, "lddInputHomeDepartments") Then
                objButtonNodeList.item(i).Click
-               WScript.Sleep 100
-               WshShell.SendKeys "Office"
-               WScript.Sleep 100
+               WScript.Sleep 1000
+               WshShell.SendKeys "office"
+               WScript.Sleep 1000
                WshShell.SendKeys "{ENTER}"
+               WScript.Sleep 1000
           'Third Section of Home department :: Role
           ElseIf Not StrComp(data, "lddInputAccessModel_SelectedRole") Then
                objButtonNodeList.item(i).Click
-               WScript.Sleep 100
+               WScript.Sleep 1000
                WshShell.SendKeys "{ENTER}"
+               WScript.Sleep 1000
           End If
      End If
 Next
+
+'Save Button Click
+objIE.Document.getElementByid("btnSave").Click
+waitIE(objIE)
