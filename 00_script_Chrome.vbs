@@ -1,3 +1,7 @@
+' Writer : JWLK
+' GitHub : https://github.com/JWLK-HASLO
+' Email : jewels@haslo.co
+
 'Find App Using Registry
 function readFromRegistry (strRegistryKey, strDefault)
     Dim WSHShell, value

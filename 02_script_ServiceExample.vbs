@@ -63,14 +63,14 @@ For i = 0 to numButtonNodeList - 1
                WScript.Sleep 100
                WshShell.SendKeys "{ENTER}"
           'Second Section of Home department :: Department
-          Else If Not StrComp(data, "lddInputHomeDepartments") Then
+          ElseIf Not StrComp(data, "lddInputHomeDepartments") Then
                objButtonNodeList.item(i).Click
                WScript.Sleep 100
                WshShell.SendKeys "Office"
                WScript.Sleep 100
                WshShell.SendKeys "{ENTER}"
           'Third Section of Home department :: Role
-          Else If Not StrComp(data, "lddInputAccessModel_SelectedRole") Then
+          ElseIf Not StrComp(data, "lddInputAccessModel_SelectedRole") Then
                objButtonNodeList.item(i).Click
                WScript.Sleep 100
                WshShell.SendKeys "{ENTER}"
